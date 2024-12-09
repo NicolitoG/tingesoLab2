@@ -17,4 +17,10 @@ public class SimulacionController {
     @Autowired
     SimulacionService simulacionService;
 
+    @GetMapping("/amount")
+    ResponseEntity<Float> getAmount(@RequestParam int amountP ,@RequestParam float interestRate,@RequestParam int years){
+        float amount = SimulacionService.getAmount(amountP, interestRate, years);
+        return ResponseEntity.ok(amount);
+    }
+
 }

@@ -31,9 +31,4 @@ public class ClientService {
         return clientRepository.findByRutAndName(rut, name);
     }
 
-    public ClientEntity getClientById(int clientId) {
-        String url = "http://registro-microservicio/api/v1/clients/" + clientId;
-        return clientRepository.getForObject(url, ClientEntity.class);
-    }
-
 }

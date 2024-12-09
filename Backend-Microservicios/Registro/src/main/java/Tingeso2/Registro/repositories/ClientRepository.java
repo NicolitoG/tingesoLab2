@@ -9,10 +9,9 @@ import java.util.Optional;
 
 @Repository
 public interface ClientRepository extends JpaRepository<ClientEntity, Long> {
-    public ClientEntity findById(int id);
+    ClientEntity findById(int id);
     ClientEntity findByRut(String rut);
     Optional<ClientEntity> findByRutAndName(String rut, String name);
 
-    ClientEntity getForObject(String url, Class<ClientEntity> clientEntityClass);
 }
 

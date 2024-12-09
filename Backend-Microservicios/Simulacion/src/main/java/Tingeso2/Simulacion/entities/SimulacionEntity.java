@@ -18,7 +18,6 @@ public class SimulacionEntity {
     @Column(unique = true, nullable = false)
     private int id;
 
-    @Transient
     private int clientId;
     private int amount;
 }
