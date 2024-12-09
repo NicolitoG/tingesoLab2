@@ -1,5 +1,5 @@
 server:
-  port: 8888
+  port: 8080
   
 eureka:
   client:
@@ -8,7 +8,7 @@ eureka:
     service-url:
       defaultZone: http://localhost:8761/eureka/
   instance:
-    hostname: localhost
+    preferIpAddress: true
 
 spring:
   cloud:
@@ -16,12 +16,14 @@ spring:
       discovery:
         locator:
           enabled: true
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Origin Access-Control-Allow-Credentials, RETAIN_UNIQUE
       routes:
         - id: Calculo
           uri: lb://Calculo
           predicates:
             - Path=/calculo/**
-
+            -
         - id: Evaluacion
           uri: lb://Evaluacion
           predicates:
