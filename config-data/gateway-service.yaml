@@ -30,7 +30,7 @@ spring:
         - id: registro-service
           uri: lb://registro-service
           predicates:
-            - Path=/registro/**
+            - Path=/api/v1/client/**
 
         - id: seguimiento-service
           uri: lb://seguimiento-service
