@@ -10,7 +10,7 @@ import java.net.URL;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/client")
+@RequestMapping("/api/v1/simulation")
 @CrossOrigin("*")
 
 public class SimulacionController {

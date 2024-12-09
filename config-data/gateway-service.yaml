@@ -17,32 +17,32 @@ spring:
         locator:
           enabled: true
       routes:
-        - id: calculo-service
-          uri: lb://calculo-service
+        - id: Calculo
+          uri: lb://Calculo
           predicates:
             - Path=/calculo/**
 
-        - id: evaluacion-service
-          uri: lb://evaluacion-service
+        - id: Evaluacion
+          uri: lb://Evaluacion
           predicates:
             - Path=/evaluacion/**
 
-        - id: registro-service
-          uri: lb://registro-service
+        - id: Registro
+          uri: lb://Registro
           predicates:
             - Path=/api/v1/client/**
 
-        - id: seguimiento-service
-          uri: lb://seguimiento-service
+        - id: Seguimiento
+          uri: lb://Seguimiento
           predicates:
             - Path=/seguimiento/**
 
-        - id: simulacion-service
-          uri: lb://simulacion-service
+        - id: Simulacion
+          uri: lb://Simulacion
           predicates:
             - Path=/simulacion/**
 
-        - id: solicitud-service
-          uri: lb://solicitud-service
+        - id: Solicitud
+          uri: lb://Solicitud
           predicates:
             - Path=/solicitud/**
