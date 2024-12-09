@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: Registro
+  datasource:
+    url: jdbc:postgresql://localhost:5432/microserviceRegister
+    username: postgres
+    password: niko2003
+  jpa:
+    hibernate:
+      ddl-auto: update

@@ -18,6 +18,7 @@ public class ClientController{
     ClientService clientService;
     @GetMapping("/list")
     public ResponseEntity<List<ClientEntity>> listClients() {
+        System.out.println("Listando clientes");
         try {
             List<ClientEntity> clients = clientService.getClients();
             System.out.println(clients);
