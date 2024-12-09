@@ -18,8 +18,14 @@ public class ClientController{
     ClientService clientService;
     @GetMapping("/list")
     public ResponseEntity<List<ClientEntity>> listClients() {
-        List<ClientEntity> clients = clientService.getClients();
-        return ResponseEntity.ok(clients);
+        try {
+            List<ClientEntity> clients = clientService.getClients();
+            System.out.println(clients);
+            return ResponseEntity.ok(clients);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
+        }
     }
     @PostMapping("/register")
     public ResponseEntity<ClientEntity> registerClient(@RequestBody ClientEntity client) {

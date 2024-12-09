@@ -16,6 +16,7 @@ public class ClientService {
     ClientRepository clientRepository;
 
     public ArrayList<ClientEntity> getClients(){
+        System.out.println("Hola");
         return (ArrayList<ClientEntity>) clientRepository.findAll();
     }
 
