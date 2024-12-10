@@ -30,27 +30,22 @@ spring:
           uri: lb://Calculo
           predicates:
             - Path=/api/v1/calculate/**
-            -
         - id: Evaluacion
           uri: lb://Evaluacion
           predicates:
             - Path=/evaluacion/**
-            -
         - id: Registro
           uri: lb://Registro
           predicates:
             - Path=/api/v1/client/**
-            -
         - id: Seguimiento
           uri: lb://Seguimiento
           predicates:
             - Path=/seguimiento/**
-            -
         - id: Simulacion
           uri: lb://Simulacion
           predicates:
             - Path=/api/v1/simulation/**
-            -
         - id: Solicitud
           uri: lb://Solicitud
           predicates:
