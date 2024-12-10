@@ -1,10 +1,32 @@
 server:
-  port: ${PORT:${SERVER_PORT:0}}
+  port: 0
+logging:
+  level:
+    org.springframework.boot.context.config: DEBUG
+    org.springframework.cloud.config.client: DEBUG
+spring:
+  cloud:
+    config:
+      enabled: true
+      uri: http://localhost:8081
+  datasource:
+    url: jdbc:postgresql://localhost:5432/microserviceSimulation
+    username: postgres
+    password: niko2003
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
 eureka:
+  instance:
+    preferIpAddress: true
+    nonSecurePortEnabled: true
+    nonSecurePort: ${server.port}
   client:
     fetch-registry: true
     register-with-eureka: true
     service-url:
       defaultZone: http://localhost:8761/eureka/
-  instance:
-    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
