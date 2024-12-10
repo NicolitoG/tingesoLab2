@@ -23,6 +23,8 @@ spring:
 eureka:
   instance:
     preferIpAddress: true
+    nonSecurePortEnabled: true
+    nonSecurePort: ${server.port}
   client:
     fetch-registry: true
     register-with-eureka: true
