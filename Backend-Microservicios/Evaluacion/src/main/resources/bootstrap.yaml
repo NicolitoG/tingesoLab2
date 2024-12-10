@@ -1,0 +1,12 @@
+server:
+  port: 0
+spring:
+  application:
+    name: Evaluacion
+  datasource:
+    url: jdbc:postgresql://localhost:5432/microserviceEvaluation
+    username: postgres
+    password: niko2003
+  jpa:
+    hibernate:
+      ddl-auto: update

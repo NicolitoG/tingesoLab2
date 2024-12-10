@@ -1,0 +1,13 @@
+server:
+  port: 0
+spring:
+  application:
+    name: Solicitud
+  datasource:
+    url: jdbc:postgresql://localhost:5432/microserviceRequest
+    username: postgres
+    password: niko2003
+  jpa:
+    hibernate:
+      ddl-auto: update
+

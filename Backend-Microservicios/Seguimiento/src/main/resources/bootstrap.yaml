@@ -1,0 +1,12 @@
+server:
+  port: 0
+spring:
+  application:
+    name: Seguimiento
+  datasource:
+    url: jdbc:postgresql://localhost:5432/microserviceTracing
+    username: postgres
+    password: niko2003
+  jpa:
+    hibernate:
+      ddl-auto: update
