@@ -7,8 +7,10 @@ import axios from "axios";
 //console.log(payrollBackendPort)
 
 export default axios.create({
-    baseURL: `http://localhost:8080`,
+    baseURL: `http://localhost:8080`//,
+    /*
     headers: {
         'Content-Type': 'application/json'
     }
+    */
 });

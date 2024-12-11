@@ -1,6 +1,7 @@
 import httpClient from "../http-common";
 
 const register = (data) => {
+    console.log("data: ", data);
     return httpClient.post("/api/v1/client/register", data);
 }
 
