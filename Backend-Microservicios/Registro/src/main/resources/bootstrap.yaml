@@ -1,10 +1,10 @@
 server:
-  port: ${PORT:${SERVER_PORT:0}}
+  port: 0
 spring:
   application:
     name: Registro
   datasource:
-    url: jdbc:postgresql://registro-db-service:5432/registro-db
+    url: jdbc:postgresql://localhost:5432/microserviceRegister
     username: postgres
     password: niko2003
   jpa:

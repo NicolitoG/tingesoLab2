@@ -4,7 +4,7 @@ spring:
   application:
     name: Simulacion
   datasource:
-    url: jdbc:postgresql://simulacion-db-service:5433/simulacion-db
+    url: jdbc:postgresql://localhost:5433/microserviceSimulation
     username: postgres
     password: niko2003
   jpa:

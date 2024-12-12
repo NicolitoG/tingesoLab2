@@ -7,10 +7,10 @@ const payrollBackendPort = import.meta.env.VITE_PAYROLL_BACKEND_PORT;
 //console.log(payrollBackendPort)
 
 export default axios.create({
-    baseURL: `http://${payrollBackendServer}:${payrollBackendPort}`,
-    
+    baseURL: `http://localhost:8080`//,
+    /*
     headers: {
         'Content-Type': 'application/json'
     }
-    
+    */
 });

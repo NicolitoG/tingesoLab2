@@ -4,7 +4,7 @@ spring:
   cloud:
     config:
       enabled: true
-      uri: http://config-service-service:8081
+      uri: http://localhost:8081
   datasource:
     url: jdbc:postgresql://simulacion-db-service:5433/simulacion-service-db
     username: postgres
@@ -23,4 +23,4 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      defaultZone: http://eureka-service-service:8761/eureka/
+      defaultZone: http://localhost:8761/eureka/
