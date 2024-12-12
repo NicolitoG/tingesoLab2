@@ -6,6 +6,8 @@ import ClientSection from './components/ClientSection';
 import Register from './components/Register';
 import Login from './components/Login';
 import ClientLogged from './components/ClientLogged';
+import simulation from './components/simulation';
+import Simulation from './components/simulation';
 
 
 function App() {
@@ -19,6 +21,7 @@ function App() {
           <Route path="/client/register" element={<Register/>} />
           <Route path="/client/login" element={<Login/>} />
           <Route path="/client/logged" element= {<ClientLogged/>} />
+          <Route path="/client/logged/simulation" element= {<Simulation/>} />
 
 
         </Routes>

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simulacion-deployment
+  labels:
+    app: simulacion-deployment
+spec:
+  selector:
+    matchLabels:
+      app: simulacion-deployment
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: simulacion-deployment
+    spec:
+      containers:
+        - name: simulacion-service
+          image: nicolitog/simulacion
+          ports:
+            - containerPort: 8091

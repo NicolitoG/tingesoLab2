@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: registro-deployment
+  labels:
+    app: registro-deployment
+spec:
+  selector:
+    matchLabels:
+      app: registro-deployment
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: registro-deployment
+    spec:
+      containers:
+        - name: registro-service
+          image: nicolitog/registro
+          ports:
+            - containerPort: 8090

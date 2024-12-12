@@ -11,13 +11,12 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/simulation")
-@CrossOrigin("*")
 
 public class SimulacionController {
     @Autowired
     SimulacionService simulacionService;
 
-    @GetMapping("/amount")
+    @GetMapping("/amount/{amountP}/{interestRate}/{years}")
     ResponseEntity<Float> getAmount(@RequestParam int amountP ,@RequestParam float interestRate,@RequestParam int years){
         float amount = SimulacionService.getAmount(amountP, interestRate, years);
         return ResponseEntity.ok(amount);

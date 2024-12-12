@@ -6,7 +6,7 @@ const ClientLogged = () => {
   const navigate = useNavigate();
 
   const goToSimularCredito = () => {
-    navigate('/placeholder');
+    navigate('/client/logged/simulation');
   };
 
   const goToPedirCredito = () => {
