@@ -11,7 +11,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/calculate")
-@CrossOrigin("*")
 
 public class CalculoController {
     @Autowired

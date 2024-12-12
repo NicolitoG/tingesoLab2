@@ -17,7 +17,7 @@ public class SimulacionController {
     SimulacionService simulacionService;
 
     @GetMapping("/amount/{amountP}/{interestRate}/{years}")
-    ResponseEntity<Float> getAmount(@RequestParam int amountP ,@RequestParam float interestRate,@RequestParam int years){
+    ResponseEntity<Float> getAmount(@PathVariable int amountP ,@PathVariable float interestRate,@PathVariable int years){
         float amount = SimulacionService.getAmount(amountP, interestRate, years);
         return ResponseEntity.ok(amount);
     }
