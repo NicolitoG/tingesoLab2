@@ -19,9 +19,7 @@ const Simulation = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await userService.simulation({
-                amountP, interestRate, years
-            });
+            const response = await userService.simulation(amountP, interestRate, years);
             setResult(response.data);
             setFeedbackMessage("Simulación exitosa.");
         } catch (error) {
